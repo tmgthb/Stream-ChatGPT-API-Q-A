@@ -30,5 +30,5 @@ for event in response:
     event_text = event['choices'][0]['delta']  # extract the text     
     collected_messages.append(event_text)  # append the text
     full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
-    st.text(f'{full_reply_content}', flush=True)
+    st.text(f'{full_reply_content}')
     time.sleep(speed)
